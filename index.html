@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VK MAX WebView Interface PoC</title>
+</head>
+<body>
+  <h2>Test for evgeniiJsEvaluator</h2>
+  <div id="status"></div>
+
+  <script>
+    const s = document.getElementById('status');
+    try {
+      if (typeof evgeniiJsEvaluator !== "undefined") {
+        s.innerText = "Interface FOUND: evgeniiJsEvaluator is present.";
+      } else {
+        s.innerText = "Interface NOT FOUND.";
+      }
+    } catch (e) {
+      s.innerText = "Error checking interface: " + e;
+    }
+  </script>
+</body>
+</html>
